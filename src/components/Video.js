@@ -116,7 +116,7 @@ class Video extends Component {
             mp4Element.muted = true
             mp4Element.autoplay = false
             mp4Element.src = mp4 
-            mp4Element.currentTime = video.currentTime
+            mp4Element.currentTime = 0
             mp4Element.loop = true // playback after complete
 
             Object.defineProperty(mp4Element, 'playing', {
@@ -188,7 +188,7 @@ class Video extends Component {
 
               {configs && configs.map(config => {
                   return (
-                    <video controls id={config.id} style={{width: '800px'}} key={config.id}></video>
+                    <video controls id={config.id} style={{width: '100%', height: '100vh'}} key={config.id}></video>
                   )
                 })}  
           </div>
